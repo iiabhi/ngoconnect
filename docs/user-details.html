@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>User Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f3f9;
+      margin: 0;
+      padding: 30px;
+      color: #333;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #5a3e85;
+      margin-bottom: 25px;
+    }
+    .info, .contributions {
+      margin-bottom: 30px;
+    }
+    .info p {
+      font-size: 1.1rem;
+      margin: 8px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      text-align: left;
+      font-size: 1rem;
+    }
+    th {
+      background-color: #5a3e85;
+      color: white;
+    }
+    button {
+      display: block;
+      width: 100%;
+      background-color: #5a3e85;
+      color: white;
+      border: none;
+      border-radius: 7px;
+      padding: 15px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #452b6a;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>User Details</h1>
+    <div class="info" id="userInfo"></div>
+    <div class="contributions" id="userContributions"></div>
+    <button onclick="goHome()">Go to Home Page</button>
+  </div>
+
+  <script>
+    function loadUserDetails() {
+      const userData = JSON.parse(localStorage.getItem('userData'));
+
+      if (!userData) {
+        alert('No user logged in. Redirecting to login page.');
+        window.location.href = 'login.html';
+        return;
+      }
+
+      // User Info
+      const userInfoDiv = document.getElementById('userInfo');
+      userInfoDiv.innerHTML = `
+        <p><strong>Username:</strong> ${userData.username}</p>
+        <p><strong>Full Name:</strong> ${userData.fullName}</p>
+        <p><strong>Email:</strong> ${userData.email}</p>
+        <p><strong>Phone:</strong> ${userData.phone}</p>
+      `;
+
+      // Contributions
+      const contributionsDiv = document.getElementById('userContributions');
+      if(userData.contributions && userData.contributions.length > 0) {
+        let tableHTML = `<h2>Contributions</h2><table><thead><tr>`;
+
+        // Create table headers dynamically based on keys in first contribution
+        const headers = Object.keys(userData.contributions[0]);
+        headers.forEach(header => {
+          tableHTML += `<th>${header.charAt(0).toUpperCase() + header.slice(1)}</th>`;
+        });
+        tableHTML += `</tr></thead><tbody>`;
+
+        userData.contributions.forEach(c => {
+          tableHTML += '<tr>';
+          headers.forEach(h => {
+            tableHTML += `<td>${c[h]}</td>`;
+          });
+          tableHTML += '</tr>';
+        });
+
+        tableHTML += '</tbody></table>';
+        contributionsDiv.innerHTML = tableHTML;
+      } else {
+        contributionsDiv.innerHTML = `<p>No contributions found.</p>`;
+      }
+    }
+
+    function goHome() {
+      // Change this URL to your home page
+      window.location.href = 'index.html';
+    }
+
+    window.onload = loadUserDetails;
+  </script>
+</body>
+</html>

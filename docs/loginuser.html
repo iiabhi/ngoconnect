@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .login-container {
+      background: rgba(0,0,0,0.5);
+      padding: 30px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #764ba2;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #5a3384;
+    }
+    .error {
+      color: #ff6b6b;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>User Login</h2>
+    <div id="error" class="error"></div>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+  </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById('username').value.trim();
+      const pass = document.getElementById('password').value.trim();
+      const errorDiv = document.getElementById('error');
+
+      // Hardcoded demo login
+      if(user === 'demoUser' && pass === 'demoPass') {
+        // Store user info & contributions (demo)
+        const userData = {
+          username: user,
+          fullName: 'Demo User',
+          email: 'demo.user@example.com',
+          phone: '123-456-7890',
+          contributions: [
+            { type: 'Donation', amount: '₹500', date: '2025-05-01', cause: 'Hunger Relief' },
+            { type: 'Volunteer', hours: 10, date: '2025-04-25', activity: 'Food Distribution' },
+          ]
+        };
+        localStorage.setItem('userData', JSON.stringify(userData));
+
+        // Redirect to user details page
+        window.location.href = 'user-details.html';
+      }
+    else if(user === 'Abhishek' && pass === 'Abhishek@01') {
+        // Store user info & contributions (demo)
+        const userData = {
+          username: user,
+          fullName: 'ABHISHEK KUMAR',
+          email: 'abhishek.kumar002525@gmail.com',
+          phone: '7004066299',
+          contributions: [
+            { type: 'Donation', amount: '₹500', date: '2025-05-01', cause: 'Child Education' },
+            { type: 'Volunteer', hours: 10, date: '2025-04-25', activity: 'Old People Care' },
+          ]
+        };
+        localStorage.setItem('userData', JSON.stringify(userData));
+
+        // Redirect to user details page
+        window.location.href = 'user-details.html';
+      }
+        if(user === 'Aakash' && pass === 'Aakash@01') {
+        // Store user info & contributions (demo)
+        const userData = {
+          username: user,
+          fullName: 'AAKASH CHAURASIA',
+          email: 'aakashchaurasia_23it005@dtu.ac.in',
+          phone: '7065508775',
+          contributions: [
+            { type: 'Donation', amount: '₹3500', date: '2025-03-01', cause: 'Medical Supplies' },
+            { type: 'Volunteer', hours: 10, date: '2025-03-25', activity: 'Teach poor children' },
+          ]
+        };
+        localStorage.setItem('userData', JSON.stringify(userData));
+
+        // Redirect to user details page
+        window.location.href = 'user-details.html';
+      }
+      else {
+        errorDiv.textContent = 'Invalid username or password.';
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register Your Cause</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e3f2fd, #fce4ec);
+      padding: 50px;
+    }
+    .register-container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 40px 50px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 32px;
+      color: #333;
+    }
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px 30px;
+    }
+    form input, form select, form textarea {
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+    form textarea {
+      resize: vertical;
+      grid-column: span 2;
+    }
+    .full-width {
+      grid-column: span 2;
+    }
+    label {
+      font-weight: 600;
+      margin-bottom: 5px;
+      display: block;
+      color: #444;
+    }
+    button {
+      grid-column: span 2;
+      background-color: #1ee2e7;
+      color: white;
+      border: none;
+      padding: 14px;
+      font-size: 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #17d0d5;
+    }
+    .checkbox {
+      display: flex;
+      align-items: center;
+      grid-column: span 2;
+      font-size: 14px;
+      color: #555;
+    }
+    .checkbox input {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="register-container">
+    <h2>Register Your Organization / Policy / Fund</h2>
+    <form action="register.php" method="POST" enctype="multipart/form-data">
+      <!-- Contact Info -->
+      <div class="full-width">
+        <label for="contact_person">Contact Person Name</label>
+        <input type="text" name="contact_person" required />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" name="email" required />
+      </div>
+      <div>
+        <label for="phone">Phone</label>
+        <input type="tel" name="phone" required />
+      </div>
+
+      <!-- Entity Info -->
+      <div class="full-width">
+        <label for="entity_name">Organization / Policy / Fund Name</label>
+        <input type="text" name="entity_name" required />
+      </div>
+      <div>
+        <label for="type">Type</label>
+        <select name="type" required>
+          <option value="">Select</option>
+          <option value="Organization">Organization</option>
+          <option value="Policy">Policy</option>
+          <option value="Fund">Fund</option>
+        </select>
+      </div>
+      <div>
+        <label for="category">Cause Category</label>
+        <select name="category" required>
+          <option value="">Select</option>
+          <option value="Hunger Relief">Hunger Relief</option>
+          <option value="Medical Aid">Medical Aid</option>
+          <option value="Education">Education</option>
+          <option value="Disaster Relief">Disaster Relief</option>
+          <option value="Temple Preservation">Temple Preservation</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <!-- Address -->
+      <div class="full-width">
+        <label for="address">Address</label>
+        <input type="text" name="address" required />
+      </div>
+      <div>
+        <label for="city">City</label>
+        <input type="text" name="city" required />
+      </div>
+      <div>
+        <label for="country">Country</label>
+        <input type="text" name="country" required />
+      </div>
+
+      <!-- Mission & Description -->
+      <div class="full-width">
+        <label for="mission">Mission Statement</label>
+        <textarea name="mission" rows="3" required></textarea>
+      </div>
+      <div class="full-width">
+        <label for="description">Detailed Description</label>
+        <textarea name="description" rows="5" required></textarea>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <label for="website">Website</label>
+        <input type="url" name="website" />
+      </div>
+      <div>
+        <label for="social">Social Media Link</label>
+        <input type="url" name="social" />
+      </div>
+
+      <!-- Uploads -->
+      <div>
+        <label for="logo">Upload Logo</label>
+        <input type="file" name="logo" accept="image/*" />
+      </div>
+      <div>
+        <label for="document">Upload Registration Document (PDF)</label>
+        <input type="file" name="document" accept=".pdf" />
+      </div>
+
+      <!-- Agreement -->
+      <div class="checkbox">
+        <input type="checkbox" name="agree" required />
+        <label>I confirm all the provided information is true and I agree to the platform’s terms.</label>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit">Submit Registration</button>
+    </form>
+  </div>
+
+</body>
+</html>

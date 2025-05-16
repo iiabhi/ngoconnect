@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Make a Contribution</title>
+  <style>
+    /* Reset & basics */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1ee2e7 0%, #17d0d5 100%);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: #fff;
+      max-width: 700px;
+      width: 90%;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      color: #222;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #1ee2e7;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: block;
+      color: #555;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1.5px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      font-family: inherit;
+      transition: border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    input[type="number"]:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #1ee2e7;
+      outline: none;
+      box-shadow: 0 0 5px #1ee2e7;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .radio-group {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .radio-group label {
+      font-weight: 500;
+      color: #444;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    input[type="radio"] {
+      accent-color: #1ee2e7;
+      cursor: pointer;
+    }
+
+    .conditional-section {
+      display: none;
+      flex-direction: column;
+      gap: 15px;
+      padding: 15px 10px;
+      border: 1px solid #d4d4d4;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+
+    .btn-submit {
+      background-color: #1ee2e7;
+      border: none;
+      color: white;
+      font-weight: 700;
+      font-size: 18px;
+      padding: 14px 0;
+      border-radius: 8px;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .btn-submit:hover {
+      background-color: #17d0d5;
+    }
+
+    @media (max-width: 600px) {
+      .radio-group {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Make a Contribution</h1>
+    <form id="contributionForm" action="#" method="POST">
+      <!-- Personal Details -->
+      <div>
+        <label for="fullName">Full Name *</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Your full name" required />
+      </div>
+
+      <div>
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" placeholder="example@email.com" required />
+      </div>
+
+      <div>
+        <label for="phone">Phone Number *</label>
+        <input type="tel" id="phone" name="phone" placeholder="+91 9876543210" required />
+      </div>
+
+      <!-- Contribution Type -->
+      <div>
+        <label>Contribution Type *</label>
+        <div class="radio-group">
+          <label><input type="radio" name="contributionType" value="volunteer" required /> Volunteer</label>
+          <label><input type="radio" name="contributionType" value="donation" /> Donation</label>
+        </div>
+      </div>
+
+      <!-- Volunteer Section -->
+      <div id="volunteerSection" class="conditional-section">
+        <div>
+          <label for="availability">Availability *</label>
+          <input type="text" id="availability" name="availability" placeholder="Days and time you can volunteer" />
+        </div>
+
+        <div>
+          <label for="skills">Relevant Skills / Experience</label>
+          <textarea id="skills" name="skills" placeholder="Describe your skills or experience relevant to volunteering"></textarea>
+        </div>
+
+        <div>
+          <label for="location">Preferred Location</label>
+          <input type="text" id="location" name="location" placeholder="Where you'd like to volunteer" />
+        </div>
+      </div>
+
+      <!-- Donation Section -->
+      <div id="donationSection" class="conditional-section">
+        <div>
+          <label for="donationAmount">Donation Amount (₹) *</label>
+          <input type="number" id="donationAmount" name="donationAmount" min="1" placeholder="Enter amount in INR" />
+        </div>
+
+        <div>
+          <label for="paymentMethod">Payment Method *</label>
+          <select id="paymentMethod" name="paymentMethod">
+            <option value="" disabled selected>Select a payment method</option>
+            <option value="credit_card">Credit Card</option>
+            <option value="debit_card">Debit Card</option>
+            <option value="net_banking">Net Banking</option>
+            <option value="upi">UPI</option>
+            <option value="cash">Cash</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="donationPurpose">Purpose of Donation</label>
+          <textarea id="donationPurpose" name="donationPurpose" placeholder="Specify if you want your donation to be used for a particular cause"></textarea>
+        </div>
+      </div>
+
+      <!-- Additional Comments -->
+      <div>
+        <label for="comments">Additional Comments</label>
+        <textarea id="comments" name="comments" placeholder="Anything else you'd like to share?"></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">Submit Contribution</button>
+    </form>
+  </div>
+
+  <script>
+    const volunteerSection = document.getElementById('volunteerSection');
+    const donationSection = document.getElementById('donationSection');
+    const radios = document.querySelectorAll('input[name="contributionType"]');
+
+    radios.forEach(radio => {
+      radio.addEventListener('change', () => {
+        if (radio.value === 'volunteer' && radio.checked) {
+          volunteerSection.style.display = 'flex';
+          donationSection.style.display = 'none';
+
+          // Make volunteer fields required
+          document.getElementById('availability').setAttribute('required', 'required');
+          // Remove required from donation fields
+          document.getElementById('donationAmount').removeAttribute('required');
+          document.getElementById('paymentMethod').removeAttribute('required');
+        } else if (radio.value === 'donation' && radio.checked) {
+          volunteerSection.style.display = 'none';
+          donationSection.style.display = 'flex';
+
+          // Make donation fields required
+          document.getElementById('donationAmount').setAttribute('required', 'required');
+          document.getElementById('paymentMethod').setAttribute('required', 'required');
+          // Remove required from volunteer fields
+          document.getElementById('availability').removeAttribute('required');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

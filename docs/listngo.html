@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delhi NGOs</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    #searchBox {
+      display: block;
+      margin: 0 auto 30px auto;
+      padding: 12px 20px;
+      font-size: 16px;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .ngo-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      max-width: 1000px;
+      padding: 25px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border-left: 5px solid #1ee2e7;
+    }
+
+    .ngo-card h2 {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 0;
+      color: #222;
+    }
+
+    .ngo-card p {
+      font-size: 16px;
+      margin: 5px 0;
+      color: #555;
+    }
+
+    .ngo-actions {
+      margin-top: 10px;
+      display: flex;
+      gap: 15px;
+    }
+
+    .ngo-actions a,
+    .ngo-actions button {
+      text-decoration: none;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .ngo-actions a {
+      
+      background-color: #1ee2e7;
+      color: #333;
+    }
+
+    .ngo-actions button {
+      
+      background-color: #e0e0e0;
+      color: white;
+    }
+
+    .ngo-actions button:hover {
+      background-color: #17d0d5;
+    }
+  </style>
+</head>
+<body>
+  <h1>Registered NGOs in Delhi</h1>
+  <input type="text" id="searchBox" placeholder="Search for an NGO by name...">
+
+  <div id="ngoList">
+    <div class="ngo-card">
+      <h2>Sadik Masih Medical Social Servant Society (Regd.)</h2>
+      <p>110/B4, Paryatan Vihar, Vasundhara Enclave, Delhi</p>
+      <div class="ngo-actions">
+        <button>Visit</button>
+        <a href='contribution.html' target='_main'>Contribution</a>
+      </div>
+    </div>
+
+    <div class="ngo-card">
+      <h2>Christian Social Welfare Trust (CSWT)</h2>
+      <p>Krishna Complex, Office No.201, Building No.52C, Village Hasanpur, I.P.Extn., Delhi-92</p>
+      <p>Email: cswt2014@gmail.com, rcckkdagar@gmail.com | Phone: 8287470413</p>
+      <div class="ngo-actions">
+        <button>Visit</button>
+        <a href='contribution.html' target='_main'>Contribution</a>
+      </div>
+    </div>
+
+    <div class="ngo-card">
+      <h2>Blue Birds Social Welfare Society</h2>
+      <p>B-139, 2nd Floor, G.D. Colony, Mayur Vihar, Phase-III, Delhi-96</p>
+      <div class="ngo-actions">
+        <button>Visit</button>
+        <a href='contribution.html' target='_main'>Contribution</a>
+      </div>
+    </div>
+
+    <div class="ngo-card">
+      <h2>Ganga Social Foundation</h2>
+      <p>Head Office: C-15, Ganga Vihar, Gokulpuri, Delhi-94</p>
+      <div class="ngo-actions">
+        <button>Visit</button>
+        <a href='contribution.html' target='_main'>Contribution</a>
+      </div>
+    </div>
+
+    <div class="ngo-card">
+      <h2>Swadeshi Movement Foundation (SMF)</h2>
+      <p>95/2/30, Chota Hasanpur, JJ Camp, I.P.Extn., Patparganj, Delhi-92</p>
+      <div class="ngo-actions">
+        <button>Visit</button>
+        <a href='contribution.html' target='_main'>Contribution</a>
+      </div>
+    </div>
+
+    <div class="ngo-card">
+      <h2>Samanvit Shiksha Sansthan</h2>
+      <p>B-635, DDA MIG Flats, East of Loni Road, Shahdara, Delhi-93</p>
+      <div class="ngo-actions">
+        <button>Visit</button>
+        <a href='contribution.html' target='_main'>Contribution</a>
+      </div>
+    </div>
+
+    <div class="ngo-card">
+      <h2>Sustainable Development Foundation</h2>
+      <p>B-9, 3rd floor, Plot No.868, Metro Pillar No.785, Dwarka More, Sector-15, Delhi-59</p>
+      <div class="ngo-actions">
+        <button>Visit</button>
+        <a href='contribution.html' target='_main'>Contribution</a>
+      </div>
+    </div>
+
+    <div class="ngo-card">
+      <h2>AVN College of Management & Technology</h2>
+      <p>A-11/A, Patel Garden, Near Metro Pillar No.787, Dwarka More, Dwarka, Delhi-59</p>
+      <div class="ngo-actions">
+        <button>Visit</button>
+        <a href='contribution.html' target='_main'>Contribution</a>
+      </div>
+    </div>
+
+    <div class="ngo-card">
+      <h2>Novlok Welfare Society</h2>
+      <p>Head Off: WZ-A-110, f/f, Street No.39, School Road, Uttam Nagar, N.Delhi-59</p>
+      <div class="ngo-actions">
+        <button>Visit</button>
+        <a href='contribution.html' target='_main'>Contribution</a>
+      </div>
+    </div>
+
+    <div class="ngo-card">
+  <h2>Dr. Abdul Kalam Social Welfare Trust</h2>
+  <p>A-162, B-Block, Main 33 Futa Road, Near Idgah Gate, Jiyauddinipur, Mustafabad, Delhi</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Right Way Women & Children Welfare Organization</h2>
+  <p>256, St.No.13, Near Masjid Raheemia, Jafrabad, Delhi-53</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Welfare Association For The Handicapped</h2>
+  <p>10/142, Block-10, Khichripur, Delhi-91</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Sakaar Outreach</h2>
+  <p>K-1/49, Basement, Chittaranjan Park, N.Delhi-19</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Sai Kripa Seva Sansthan</h2>
+  <p>K-2/814, 2nd floor, Mata Chowk, Opp.Metro Tower Hotel, Vasant Kunj Road, Mahipalpur, New Delhi-37</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Society For The Promotion Of Women & Child Welfare</h2>
+  <p>5002, Ashoka Enclave, Plot No.8-A, Sector-11, Dwarka, N.Delhi-75</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Viklang Sahara Samiti Delhi</h2>
+  <p>G-Block, Basti Vikas Kendra, Mangolpuri, New Delhi-83</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<!-- Additional NGO Cards -->
+<div class="ngo-card">
+  <h2>Women and Rural Development Association</h2>
+  <p>D-165, Arya Samaj Road, Uttam Nagar, New Delhi-59</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>S.K. Foundation</h2>
+  <p>1252, D-Block, J.J.Colony, Bawana, Delhi-39</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Lajwanti (Education) Welfare Society</h2>
+  <p>12/110, Geeta Colony, Delhi-31</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Family of Shirdi Sai Baba</h2>
+  <p>E-6, First Floor, Basti Vikas Kendra, Sultanpuri, N.Delhi-86</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Kriti Foundation</h2>
+  <p>Plot No.251, Block-B, Sector-19, Dwarka, New Delhi-75</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Aashalata Victoria Wilkinson Memorial Charitable Trust</h2>
+  <p>L-96D, 2nd Floor, Saket, N.Delhi</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Safe Approach for Nascent Termination of Social Hazard</h2>
+  <p>E-93, Bhagwati Garden Extn., N.Delhi-59</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Nisha Social Welfare Society</h2>
+  <p>Basti Vikas Kendra, 1st floor, C-Block, J.J.Colony, Bawana, Delhi</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Gurudwara Hargobindsar Welfare Trust</h2>
+  <p>G.T.Karnal Road, Nangli Poona, Delhi-36</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Shiksha Jyoti Foundation</h2>
+  <p>I-394, Sunder Nagri, Delhi-93</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Shiksha Abhiyan Educational Soceity</h2>
+  <p>H.No.20B, Lane No.38, Chanakya Place Part-I, N.Delhi-59</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Janhit</h2>
+  <p>O-Block, H.No.335, Sunder Nagar, North East Delhi-93</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Samkalp Education Foundation</h2>
+  <p>H.No.119, Kh.No.123/10/2, 123/11/1, Ground Floor, Sant Nagar Village, Burari, N.Delhi-84</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Maa Astha Samajik Vikas Sewa Sanstha</h2>
+  <p>K-399/A, Street No.6C, Mahipalpur, New Delhi-37</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+<div class="ngo-card">
+  <h2>Dagar Rural Development Organization</h2>
+  <p>H.No.800, Village Dallupura, Behind Somerville School, Vasundhra Enclave, Delhi-96</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Aasra Al Hind Educational and Social Welfare Society</h2>
+  <p>B-412, DDA Colony, Khyala, N. Delhi</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>VIPS Foundation</h2>
+  <p>1859/139, 3rd floor Shanti Nagar, Tri Nagar, Delhi-110035</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Shiksha Swasthya Seva Samiti</h2>
+  <p>J3-89B/6, Sangam Vihar, N.Delhi-80</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Ujjwal Mahila Vikas Society</h2>
+  <p>B-69A, Kh.No. 388/263, New Ashok Nagar, Delhi-96</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Dev Jyoti Foundation</h2>
+  <p>612, G/F, Jawahar Mohalla, Acharya Niketan, Delhi-91</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>RME Samudai Bal Vikas Society</h2>
+  <p>BIW Colony, Basti Vikas Kendra, Gate No.1, Badarpur, N.Delhi-44</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Sehyog Vikas Samiti</h2>
+  <p>A-73A, Gali No.3, Harsh Vihar, Hari Nagar-III, Meethapur Tanki Road, Opp. Mother Dairy, Badarpur, N.Delhi-44</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Rising Initiative For All</h2>
+  <p>C-7, Ground floor, Dilshad Colony, Delhi-95</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Nav Drishti Foundation Trust</h2>
+  <p>B-14/55, Gali No.10, Subhash Vihar, North Ghonda, New Delhi-53</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Ashiana Foundation</h2>
+  <p>Plot No.410, Shahzada Bagh, Phase-1, Inderlok, Delhi-35</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Jan Kalyan Ek Nai Udaan Trust</h2>
+  <p>H.No.387, Gali No.4, J-Block, Sunder Nagri, Delhi-93</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Samaj Vikas Samiti</h2>
+  <p>E-20-B/100, Jawahar Mohalla, Patparganj, Delhi-91</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Mascot Educational & Social Welfare Society</h2>
+  <p>A-108, Old Seemapuri, Delhi-95</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Join2 Our Foundation</h2>
+  <p>WZ-63, Shadipur, Shadipur Central, West Patel Nagar, N.Delhi-08</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Ram Lakhan Mahtha Charitable Trust</h2>
+  <p>Plot No.111/9, D-4, Kaveri Apartment, Kishangarh, Vasant Kunj, N.Delhi-70</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Aapki Apni Pahchan Bhartiya Shakti Sangthan</h2>
+  <p>246/67, 3rd floor, East School Block, Mandawali, Delhi-92</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Anglo Urdu Educational & Welfare Society</h2>
+  <p>477, Gali No.21, Jafrabad, Delhi-53</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Al-Madina Educational & Cultural Society</h2>
+  <p>E-49/485, Gali No.5, Janta Mazdoor Colony, Delhi-53</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Kohinoor Health & Educational Society</h2>
+  <p>12A/196, Gali No.13, Vijay Mohalla, Maujpur, Delhi-53</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+<div class="ngo-card">
+  <h2>Jamiat Faizan-e-Ulama-e-Hind</h2>
+  <p>C-145/1, Ground Floor, Tayyab Lane, Shaheen Bagh, Jamia Nagar, Okhla, New Delhi-25</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>The Citizens Foundation</h2>
+  <p>180A S/F, L/P, Hari Nagar Ashram, Near Railway Line, N.Delhi-14</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Manav Vikas Foundation</h2>
+  <p>E-20 A/445, Jawahar Mohalla, Patparganj, Delhi-91</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Institute of Learning Mania</h2>
+  <p>756/20-A, Zakir Nagar, Okhla, N.Delhi-25</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Madrsa Ikramul Islam Trust</h2>
+  <p>125/B, Basti Khwaja Mir Dard Road, New Delhi-02</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Zameer Hasan Foundation</h2>
+  <p>A-45, Abul Fazal Enclave, Jamia Nagar, New Delhi-25</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Bright Vision Educational And Cultural Society</h2>
+  <p>1304, Lane No.41, Jafrabad, Delhi-53</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Hazrat Ameer Khusro Foundation</h2>
+  <p>554/1, Hazrat Ameer Khusro Nagar, Alvi Chowk, Basti Hazrat Nizamuddin, New Delhi-13</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Pahal Society For Development</h2>
+  <p>F-370, Flat No.A-1, Ground Floor, Radhe Krishna Sadan, Block-F, Phase-6, Aya Nagar Extn., New Delhi-47</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Minority Community Teachers Association</h2>
+  <p>C-5, Basement, Dilshad Colony, Delhi-95</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>RIFA Foundation</h2>
+  <p>C-19, USF, Block-C, Dilshad Colony, Delhi-95</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Social Pride Welfare Society</h2>
+  <p>B-49, first floor, Shaheen Bagh, Jamia Nagar, New Delhi-25</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Jyoti Samajik Sewa Sanstha</h2>
+  <p>K-399/A, Street No.6C, Mahipalpur, New Delhi-37</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Vikas Zinda Hai</h2>
+  <p>WZ-24A, Adarsh Gali, Palam Vill., N.Delhi</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Chirag Girls Education Foundation</h2>
+  <p>3071/13, Pratap Street, Near Golcha Parking, N.Delhi-02</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Mahila Bal Vikas Suraksha Evam Shiksha Samiti</h2>
+  <p>E-13A-444, J-Block, New Seelampur, Delhi-53</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Imperial Service Development Society</h2>
+  <p>C-813, DDA Flats, East of Loni Road, Shahdara, Delhi-93</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Indian Medicine Development Trust</h2>
+  <p>5106, Lal Building, Kucha Noorullah Khan, Phatak Bans, Sirkiwala, Lal Kuan, Delhi-06</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Helping Hand Charitable Trust</h2>
+  <p>Gurko House, 19/A, Begumpur, Near MTNL Office, Malviya Nagar, N.Delhi-17</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+<div class="ngo-card">
+  <h2>Federation For Educational Development</h2>
+  <p>C-7, G/F, Dilshad Colony, Delhi-95</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Association For Holistic Development Of Children</h2>
+  <p>E-20/1, Street No.7, House No.463, Subhash Vihar, Delhi-53</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Vidhipunj Foundation</h2>
+  <p>C-51A/5, Shashi Garden, Mayur Vihar, Phase-1, New Delhi-91</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Society Towards Operation Pollution</h2>
+  <p>R-613, Mangolpuri, N.Delhi-83</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Bagh Educational and Social Welfare Society</h2>
+  <p>12A/5B, Lane No.7, Vijay Mohalla, Maujpur, Delhi-53</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Delta Educational & Social Welfare Society</h2>
+  <p>1111, Street No.39/5, Jafrabad, Delhi-53</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Ruhan Educational & Charitable Trust</h2>
+  <p>H.No.1086, Street No.36, Jafrabad, Near Kuan Masjid, Delhi-110053</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Bhartiya Navdeep Samiti</h2>
+  <p>LP-54D, Maurya Enclave, Pitampura, Delhi-88</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Society For Welfare of Rural & Urban People (SWRUP)</h2>
+  <p>Chamber No.334, Civil Side, Tis Hazari Court, Delhi-54</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Matrix Society For Social Services (MASS)</h2>
+  <p>E-303, 1st Floor, Near Surya Green Banquet Hall, Patel Garden, Dwarka Morh, Delhi-78</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Sankalp Educational & Social Welfare Society</h2>
+  <p>B-215, Basti Khwaja Mir Dard, Minto Road, N.Delhi-110002</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<div class="ngo-card">
+  <h2>Liza Foundation</h2>
+  <p>4533, First Floor, Sheesh Mahal, Gali Shahtara, Ajmeri Gate, Delhi-06</p>
+  <div class="ngo-actions">
+    <button>Visit</button>
+    <a href='contribution.html' target='_main'>Contribution</a>
+  </div>
+</div>
+
+<!-- vvv -->
+  </div>
+
+  <script>
+    const searchBox = document.getElementById('searchBox');
+    const ngoCards = document.querySelectorAll('.ngo-card');
+
+    searchBox.addEventListener('input', function() {
+      const query = this.value.toLowerCase();
+      ngoCards.forEach(card => {
+        const name = card.querySelector('h2').innerText.toLowerCase();
+        card.style.display = name.includes(query) ? 'block' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
